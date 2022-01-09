@@ -1,0 +1,410 @@
+* {
+/* 去除所有的内外边框 */
+    padding: 0px;
+    margin: 0px;
+}
+
+.Head {
+ /* 定义头部的长宽 */
+    width: 1903px;
+    height: 60px;
+     /* position: absolute;  */
+}
+
+
+/* 左边的导航栏 */
+.Left-guide{
+/* 左边的内边距为24px */
+    padding-left:  24px; 
+/* 定义长宽 */
+    width: 473.39px;
+    height: 60px;
+/* 使其成为内联块元素，便于右边的排版 */
+    display: inline-block;
+/* 设置字体大小为0px，为了防止元素与元素之前莫名其妙的外边距 */
+    font-size: 0px;
+/* 相对定位，使其左边整个的导航栏改变位置 top：1px； */
+    position: relative;
+    top: 1px;
+}
+
+.Left-guide .Left-element{
+/* 定义两个导航栏中的文字大小 */
+    font: 13px Arial,sans-serif;
+    
+}
+
+a {
+/* a标签的颜色和去除下划线 */
+    color: black;
+    text-decoration: none;
+
+}
+
+.Left-element {
+/* 导航栏中文字元素的边距设置 */
+   margin-top: 20px;
+   margin-left: 0px;
+   margin-right:31px;
+/* 定义为内联块元素 */
+   display:inline-block;
+
+}
+/* 隐藏层的css代码 */
+.None-one{
+/* 大小和边距 */
+    margin-top: 1px;
+    right: 20px;
+    width: 304px;
+    height: 223px;
+/* 背景颜色为白色 */
+    background: #fff;
+/* 用绝对定位防止移动 */
+    position: absolute;
+/* 隐藏掉要显示的区域！！！ */
+    display: none;
+    box-shadow:0px 2px 10px 0px rgb(0 0 0 / 15%); /*为边框添加阴影*/
+    border-radius: 12px;     /*边框变圆润*/   
+}
+/* 下面是隐藏层的文字样式和图片样式 */
+.None-first {
+    padding-top:16px;
+    width: 304px;
+    height: 86px;
+}
+
+.None-wp  {
+    width: 76px;
+    height: 70px;
+    /* display: inline-block; */
+    float: left;
+}
+
+.Wp-w {
+    color: #000;
+    font: 13px Arial,sans-serif;
+    text-align:center;
+    margin-top: 3px;
+}
+
+.Wp-w:hover {
+    color:blue;
+}
+/* 隐藏层的最后一个提示句子 */
+.See {
+    /* background: #000; */
+    width: 304px;
+    height: 23px;
+    display: inline-block;
+/* 文本属性居中 */
+    text-align:center;
+    margin-top: 10px;
+}
+
+.See-s {
+    color:#9195a3;
+    font: 13px Arial,sans-serif;
+}
+.See-s:hover {
+/* 移动上去之后文本变色 */
+    color: blue;
+}
+
+/* 设置，也就是用来移动上显示隐藏层的区域 */
+.Left-Popup {
+    /* 长高 */
+    width: 26px;
+    height: 17px;
+    margin: 0px;
+}
+/* 因为要涉及到一些其他的东西，所以最后一个“设置”我用了一个div包括 */
+.Left-Popup-head {
+    display: inline-block;
+    width: 26px;
+    height: 17px;
+    padding-bottom: 10px;
+}
+/*鼠标悬停弹出隐藏层*/
+.Left-Popup-head:hover .None-one{ 
+    display: block;
+}
+/* 隐藏层的图片设置 */
+.None-photo {
+    margin: 0px 16px;
+    width: 42px;
+    height: 42px;
+}
+
+
+/* hover伪类，移动上之后颜色发生改变 */
+.Left-element:hover{
+    color: blue;
+}
+
+
+
+
+/*右边的导航栏*/
+.Right-guide {
+/* 长高 */
+    height: 60px;
+    width: 345.08px;
+/* 脱离默认流，进入右边，使其与右边的导航栏在同一行里 */
+    float: right;
+    color: #000;
+/* 与上一个一样，作为父级元素的它设置一个字体大小为0的属性，避免一些莫名其妙的外边距 */
+    font-size: 0px;
+    /* display: inline-block; */
+}
+/* 天气的css */
+.Show-weather {
+    display: inline-block;
+    width: 105.23px;
+    height: 23px;
+    margin-top:19px;
+    margin-left:32px ;
+    font-size: 0px;
+}
+/* 设置第一个div为内联块，防止后面的元素换行 */
+.Show-weather-one {
+    display: inline-block;
+    width: 89.23px;
+    height: 23px;
+}
+
+.Show-weather-herf {
+    display: inline-block;
+}
+/* 移动上之后改变颜色并且鼠标改换样式 */
+.Show-weather-herf:hover{
+    color: blue;
+    cursor:pointer; /*鼠标经过改变成手的形状*/
+}
+
+/* 设置字体样式 */
+.Weather-element {
+    font-size: 13px;
+    font-family: Arial,sans-serif;
+    margin-right: 8px;
+    /* display: inline-block; */
+    vertical-align: middle;
+}
+/* 设置天气图片样式 */
+.Weather-icon {
+    width: 23px;
+    height: 23px;
+ /* 底部与兄弟元素的基准线对齐*/
+    vertical-align: middle;
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 4px;
+}
+/* 温度 */
+.Weather-word {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 13px;
+/* 同上一个一样，与兄弟元素的底部基准线对齐 */
+    vertical-align: middle;
+}
+/* 天气的状态 */
+.Word-lang {
+    padding: 0 2px;
+    font-size: 12px;
+    height: 16px;
+/* 底部基准线对齐 */
+    vertical-align: middle;
+    color: #fff;
+    background: #4e71f2;
+    line-height: 17px;
+    display: inline-block;
+    margin-top: -2px;
+/* 边框变的圆润! */
+    border-radius: 3px;
+/*鼠标经过不变形状*/
+    cursor: default;      
+}
+/* 设置 */
+.Word-Set-up {
+    font-size: 13px;
+    font-family: Arial,sans-serif;
+    display: inline-block;
+    margin: 24px 0px 0px 32px;
+/* 与兄弟元素的顶部基准线对齐 */
+    vertical-align: top;
+/* ！！！其实这种对齐方式可以用相对定位来解决，但太烦，而且太多的定位容易引起页面屎 */
+}
+/* 鼠标移动上变色 */
+.Word-Set-up:hover{
+    color: blue;
+}
+
+/* 个人信息的css */
+.Personal-information {
+    display:inline-block;
+    height: 30px; 
+    width: 93.84px;
+    margin: 15px 0px 0px 32px;
+    vertical-align: bottom;
+}
+
+.Personal-information-tow {
+    display: inline-block;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #4e71f2;
+/* 边框变圆润 */
+    border-radius: 50%;
+}
+ 
+.Personal-photo {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+/* 边框变圆润 */
+    border-radius:50%;
+/* 利用内边距使得图片居中在span标签里 */
+    padding: 2px;
+}
+
+.Number {
+    display: inline-block;
+/* 字体样式设置 */
+    color: #000;
+    font-size: 13px;
+    font-family: Arial,sans-serif;
+/* 对齐和边距 */
+    vertical-align: top;
+    margin:10px 0px 0px 6px ;
+}
+.Number:hover{
+    color: blue;
+}
+/* 头部的导航栏到此结束*/
+
+
+/* 搜索栏和logo */
+.Logo-Search {
+    width: 1000px;
+    height: 387.59px;
+    /* background: #000; */
+    margin: 0px 451.5px;
+    display: inline-block;
+/* 调整位置 */
+    position: relative;
+    top: -1px;
+}
+
+.Logo-Search-first {
+    width: 654px;
+/* 使高顶满 */
+    /* height: 100%; */
+    margin: 0px auto;
+    /* background-color: red; */
+}
+
+.Logo {
+    /* 高度 */
+    height: 232.55px;
+    /* background: #4e71f2; */
+}
+
+
+.Logo-baidu {
+    display: block;
+    /* position: relative; */
+    width: 270px;
+    height: 129px;
+/* 采用了相对定位的方法用来调整位置 */
+    top: 89px;
+    position: relative;
+    margin: 0px auto;
+}
+
+.Logo-Search-sencond {
+    width: 654px;
+    height: 44px;
+    /* background: black; */
+    display: inline-block;
+    /* 上面说过好多次，再来强调一下！把父元素的字体大小设置为0px，防止子元素之间
+    莫名其妙的外边距 */
+    font-size:0px;
+}
+
+.Photo-Search {
+    width: 546px;
+    height: 44px;
+    display: inline-block;
+    /* 相对定位，调整位置 */
+    position: relative;
+    /* overflow:hidden; */
+}
+
+.Photo {
+    width: 24px;
+    height: 20px;
+    /* background-color: #fff; */
+    background-image:url("./images/zhaopian.png");
+    display: block;
+    /* 绝对定位把图片优先显示出来 */
+    position: absolute;
+    background-size: 24px 24px;
+    left: 506px;
+    top: 10px;
+    
+}
+
+.Photo:hover {
+/* 鼠标移动更换背景颜色和鼠标样式 */
+    /* background-color: blue; */
+    cursor:pointer;
+    /* filter: drop-shadow(144px 0 0 #fff);  */
+    /* transform: translateY(0px); */
+    /* filter: drop-shadow(0 0px blue); */
+    background-image: url("./images/zhaopian2.png");
+}
+/* 搜索栏 */
+.Search {
+    width: 480px;
+    height: 16px;
+    padding: 12px 48px 12px 16px;
+/* 边框变圆润，与之前不同的是只改变了两边 */
+    border-radius: 10px 0px 0px 10px;
+    /* 为搜索栏添加一个边框 */
+    border: 2px solid #c4c7ce;
+    position: absolute;
+    /* display: inline-block; */
+    margin: 0px;
+}
+
+/* 鼠标移动和鼠标聚焦是更改边框颜色 */
+.Search:hover {
+    border-color: #a7aab5;
+}
+.Search:focus{
+    border-color: #4e6ef2;  
+    outline: 0;
+}
+
+/* 百度一下 */
+.Baidu-W {
+    display: inline-block; 
+    vertical-align: top;
+    width: 108px;   
+    height: 44px;
+    position: relative;
+    font-size: 17px;
+    color: #fff;
+    background-color: #4e64f2;
+    border-radius: 0px 10px 10px 0px;
+/* 用水平居中和行高的办法把它给垂直居中 */
+    text-align:center;
+    line-height: 44px;
+}
+.Baidu-W:hover {
+/* 移动上之后改变颜色和鼠标样式 */
+    cursor:pointer;
+    background-color: #4662d9;
+}
